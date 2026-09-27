@@ -5,7 +5,7 @@ import SearchBar from "./components/SearchBar";
 import Toast from "./components/Toast";
 
 const FILES_STORAGE_KEY = "rag_uploaded_files";
-const API_BASE_URL = "http://localhost:8000";
+const API_BASE_URL = "https://rag-system-3-qxwu.onrender.com";
 
 function App() {
   const [files, setFiles] = useState(() => {

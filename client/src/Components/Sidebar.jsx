@@ -1,4 +1,4 @@
-import React from "react";
+
 
 /**
  * Status badge shown next to each file in the sidebar.

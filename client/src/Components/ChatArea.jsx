@@ -1,4 +1,4 @@
-import React from "react";
+
 function Sources({ sources }) {
   if (!sources || sources.length === 0) return null;
 
