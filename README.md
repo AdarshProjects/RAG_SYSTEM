@@ -1,4 +1,4 @@
-# 🧠 CodeMind-AI | RAG-Based Semantic Search System
+# RAG-Based Semantic Search System
 
 A **Retrieval-Augmented Generation (RAG)** application that allows users to upload PDF documents and ask questions in natural language. The system retrieves semantically relevant information using **ChromaDB** and **Sentence Transformers**, then generates context-aware responses with **Google Gemini**.
 
