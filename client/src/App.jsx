@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Sidebar from "./components/Sidebar";
-import ChatArea from "./components/ChatArea";
-import SearchBar from "./components/SearchBar";
-import Toast from "./components/Toast";
+import Sidebar from "./Components/Sidebar";
+import ChatArea from "./Components/ChatArea";
+import SearchBar from "./Components/SearchBar";
+import Toast from "./Components/Toast";
 
 const FILES_STORAGE_KEY = "rag_uploaded_files";
 const API_BASE_URL = "https://rag-system-3-qxwu.onrender.com";
