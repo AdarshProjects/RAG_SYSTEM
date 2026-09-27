@@ -1,5 +1,7 @@
 _pycache_
-chromaDB
+chromaDB/*
+!chromaDB/db.py
+!chromaDB/__init__.py
 .env
 node_modules
 public 
