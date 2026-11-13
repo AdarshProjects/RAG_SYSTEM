@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import Toast from "./Toast";
 
 function AttachmentChip({ attachment, onRemove }) {
   if (!attachment) return null;
@@ -83,12 +84,23 @@ function SearchBar({
 }) {
   const [query, setQuery] = useState("");
   const [fileError, setFileError] = useState("");
+  const [toast, setToast] = useState(null);
+
   const fileInputRef = useRef(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const trimmed = query.trim();
     if (!trimmed || disabled) return;
+
+    // Check if a file has been uploaded
+    if (!attachment) {
+      setToast({
+        message: "Please first upload the file from which you want to ask the question.",
+        type: "error",
+      });
+      return;
+    }
 
     onSubmit(trimmed);
     setQuery("");
@@ -122,6 +134,8 @@ function SearchBar({
 
   return (
     <div className="w-full max-w-2xl mx-auto mb-6">
+      <Toast toast={toast} onDismiss={() => setToast(null)}
+/>
       {fileError && (
         <div className="text-sm text-red-400 mb-2 px-1">{fileError}</div>
       )}
@@ -183,7 +197,6 @@ function SearchBar({
           type="submit"
           disabled={disabled || !query.trim()}
           aria-label="Search"
-          
           className="w-11 h-11 min-w-11 rounded-xl bg-emerald-600 text-white flex items-center justify-center hover:bg-emerald-700 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
         >
           <svg
