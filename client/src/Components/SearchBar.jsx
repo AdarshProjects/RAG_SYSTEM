@@ -183,6 +183,7 @@ function SearchBar({
           type="submit"
           disabled={disabled || !query.trim()}
           aria-label="Search"
+          
           className="w-11 h-11 min-w-11 rounded-xl bg-emerald-600 text-white flex items-center justify-center hover:bg-emerald-700 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
         >
           <svg
